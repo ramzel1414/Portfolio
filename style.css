@@ -309,7 +309,6 @@ header .navbar ul li a:hover {
 
 .contact .row {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -350,7 +349,8 @@ header .navbar ul li a:hover {
     text-transform: uppercase;
     color: #fff;
     font-size: 3rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
+    margin-top: 1rem;
 }
 
 .contact .row .content .info h3 {
@@ -363,6 +363,20 @@ header .navbar ul li a:hover {
 }
 
 .contact .row .content .info h3 i {
+    padding-right: 1rem;
+    color: var(--yellow);
+}
+
+.contact .row .content .social-links h3 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .social-links h3 i {
     padding-right: 1rem;
     color: var(--yellow);
 }
