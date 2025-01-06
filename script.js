@@ -52,7 +52,20 @@ function sendMail() {
     }
 
     //send these values to email js so email js would send back
-    emailjs.send("service_dl4nssm", "template_vcjrsu8", params).then(alert("Email Sent!"));
+    emailjs.send("service_dl4nssm", "template_vcjrsu8", params).then(function() {
+        // Show a success message
+        alert("Email Sent!");
+
+        // Empty the form fields
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("subject").value = "";
+        document.getElementById("message").value = "";
+    }).catch(function(error) {
+        // Handle the error if emailjs fails
+        alert("Something went wrong. Please try again.");
+    });
+
 }
 
 // //CHATGPT
