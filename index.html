@@ -6,6 +6,16 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "vG6_4SxQVhrkMW_ED",
+            });
+        })();
+    </script>
 </head>
 <body>
 
@@ -241,11 +251,11 @@
     </div>
 
     <form>
-        <input type="text" placeholder="name" class="box">
-        <input type="text" placeholder="email" class="box">
-        <input type="text" placeholder="name" class="box">
-        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
-        <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i></button>
+        <input type="text" placeholder="name" class="box" id="name">
+        <input type="email" placeholder="email" class="box" id="email">
+        <input type="text" placeholder="subject" class="box" id="subject">
+        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message" id="message"></textarea>
+        <button type="submit" class="btn" onclick="sendMail()"> Send <i class="fas fa-paper-plane"></i></button>
     </form>
 
 </div>

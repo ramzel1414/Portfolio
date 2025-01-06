@@ -43,6 +43,18 @@ anchorLinks.forEach(function(anchorLink) {
     });
 });
 
+function sendMail() {
+    let params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    }
+
+    //send these values to email js so email js would send back
+    emailjs.send("service_dl4nssm, template_vcjrsu8", params).then(alert("Email Sent!"));
+}
+
 // //CHATGPT
 // function handleScrollAndLoad() {
 //     // Remove the 'fa-times' class from the element with the id 'menu'
