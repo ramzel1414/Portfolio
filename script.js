@@ -52,7 +52,7 @@ function sendMail() {
     }
 
     //send these values to email js so email js would send back
-    emailjs.send("service_dl4nssm, template_vcjrsu8", params).then(alert("Email Sent!"));
+    emailjs.send("service_dl4nssm", "template_vcjrsu8", params).then(alert("Email Sent!"));
 }
 
 // //CHATGPT
