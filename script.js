@@ -97,3 +97,25 @@ function sendMail() {
 //         console.log('hellow worlfds');
 //     });
 // });
+
+
+  document.querySelectorAll('.box img').forEach(img => {
+    img.addEventListener('click', function () {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    });
+  });
+
+  // Close modal on click of X
+  document.querySelector('.close').addEventListener('click', function () {
+    document.getElementById('imageModal').style.display = "none";
+  });
+
+  // Optional: Close modal on outside click
+  document.getElementById('imageModal').addEventListener('click', function (e) {
+    if (e.target === this) {
+      this.style.display = "none";
+    }
+  });
