@@ -262,7 +262,7 @@ header .navbar ul li a:hover {
 .education .box-container .box p {
     font-size: 1.4rem;
     color: #eee;
-    padding: 1 rem 0;
+    padding: 1rem 0;
 }
 
 .education .box-container .box i {
@@ -509,9 +509,14 @@ header .navbar ul li a:hover {
 
 
 
+@media (max-width:400px) {
 
+    .modal-content {
+        margin-top: 3rem;
 
+    }
 
+}
 
 
 
